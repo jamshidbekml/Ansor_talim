@@ -46,7 +46,7 @@ module.exports = async function(){
         await init(db);
         await relations(db);
         
-        await sequelize.sync({force: true})
+        await sequelize.sync({force: false})
 
         return db;
     } catch (error) {
